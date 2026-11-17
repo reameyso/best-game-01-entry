@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emberfall — Hold the Light</title>
+<link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+<div id="stage">
+  <canvas id="game" width="1280" height="720"></canvas>
+
+  <div id="overlay-title" class="overlay">
+    <div class="panel">
+      <p class="kicker">A LANTERN WARDEN ARCADE GAME</p>
+      <h1>EMBERFALL</h1>
+      <p class="tagline">Night falls. The Gloom pours in. One lantern stands between the dark and dawn.</p>
+      <p class="controls">
+        <b>WASD / arrows</b> move &nbsp;·&nbsp; <b>Mouse</b> aim — bolts fire on their own<br>
+        <b>Space / Shift / right-click</b> dash &nbsp;·&nbsp; <b>P</b> pause &nbsp;·&nbsp; <b>M</b> mute
+      </p>
+      <p class="rules">Banish the Gloom, gather its embers, level up and choose your light.<br>
+      Clear wave 10 and dawn breaks — or keep fighting for score.</p>
+      <button id="btn-start" class="big">Light the Lantern</button>
+      <p class="fine">An original game. No accounts, no downloads, no network — it runs entirely from these files.</p>
+    </div>
+  </div>
+
+  <div id="overlay-upgrade" class="overlay hidden">
+    <div class="panel">
+      <p class="kicker">LEVEL UP — CHOOSE YOUR LIGHT</p>
+      <h2>The lantern burns brighter</h2>
+      <div id="upgrade-cards" class="cards"></div>
+      <p class="fine">Pick one — or press 1, 2 or 3.</p>
+    </div>
+  </div>
+
+  <div id="overlay-pause" class="overlay hidden">
+    <div class="panel">
+      <p class="kicker">PAUSED</p>
+      <h2>The Gloom waits</h2>
+      <button id="btn-resume" class="big">Resume</button>
+      <button id="btn-restart-pause" class="ghost">Restart the run</button>
+    </div>
+  </div>
+
+  <div id="overlay-over" class="overlay hidden">
+    <div class="panel">
+      <p class="kicker">THE LIGHT GOES OUT</p>
+      <h2>Night claims the warden</h2>
+      <div id="over-stats" class="stats"></div>
+      <button id="btn-restart" class="big">Light it again &nbsp;(R)</button>
+    </div>
+  </div>
+
+  <div id="overlay-victory" class="overlay hidden">
+    <div class="panel">
+      <p class="kicker">WAVE 10 CLEARED</p>
+      <h2>Dawn breaks</h2>
+      <p class="tagline">The last of the Gloom burns away in the morning light. You held the lantern — and the night.</p>
+      <div id="victory-stats" class="stats"></div>
+      <button id="btn-continue" class="big">Keep fighting — endless</button>
+      <button id="btn-restart-victory" class="ghost">New run</button>
+    </div>
+  </div>
+</div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
